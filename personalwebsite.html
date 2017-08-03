@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="personalwebsite.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="personalwebsite.js"></script>
+  <!-- <script src="js/three.min.js"></script> -->
+  <!-- <script src="http://dat-gui.googlecode.com/git/build/dat.gui.min.js"></script> -->
+
+<!-- these are links for the stack -->
+<link rel="stylesheet" type="text/css" href="IsometricGrids/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="IsometricGrids/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="IsometricGrids/css/component.css" />
+		<script src="IsometricGrids/js/modernizr.custom.js"></script>
+
+</head>
+
+
+<body>
+  <div id= "myNavbar" class="topnav" class="topnavChanged">
+  <a class="active photoIcon2" href="#me"style="height:83px;">me :)</a>
+  <a href="#records"><img src="icons/headphones.png" style="width:46px;height:52px;" /> my records</a>
+  <a href="#photo" class = "photoIcon"><img src="icons/camera3.png" style="width:60px;height:52px;" /> my photos</a>
+  <a href="#code" ><img src="icons/code4.png" style="width:50px;height:52px;" /> my code</a>
+  </div>
+
+  <div class="parallax1"></div>
+
+  <!-- spacer div -->
+  <!-- <div class: "transparent" id = "me" style="background-color: #E8EDF0; height: 40px;"></div>
+  <div class: "transparent" id = "intro" style="background-color: #E8EDF0; height: 300px"> -->
+    <!-- <div id= "profile" ><img src="idgaf.jpg" width = "380px" height = "240px"/></div> -->
+  <div id = "me" class="parallax3">
+    <div class = "spacer"></div>
+    <div id="typedtext"></div>
+    <script>
+    // set up text to print, each item in array is new line
+    var aText = new Array(
+      "hi👋🏼",
+      "I'm Kya and I like:",
+      "raspberry jam ",
+      "(the kind my grandma used to",
+      "mail me in mason jars),",
+      "sunflowers, ",
+      "lowercase letters, ",
+      "street fútbol (the world's game), ",
+      "headphones, ",
+      "dancing eyes closed, ",
+      "and living eyes open. ",
+      "",
+      "scroll & see my canvas :)"
+    );
+    var iSpeed = 100; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+
+    function typewriter()
+    {
+      sContents =  ' ';
+      iRow = Math.max(0, iIndex-iScrollAt);
+      var destination = document.getElementById("typedtext");
+
+      while ( iRow < iIndex ) {
+        sContents += aText[iRow++] + '<br />';
+      }
+      destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+      if ( iTextPos++ == iArrLength ) {
+        iTextPos = 0;
+        iIndex++;
+        if ( iIndex != aText.length ) {
+          iArrLength = aText[iIndex].length;
+          setTimeout("typewriter()", 500);
+        }
+      } else {
+        setTimeout("typewriter()", iSpeed);
+      }
+    }
+
+
+    typewriter();
+    </script>
+  </div>
+
+
+
+
+
+  <!-- // Code to implement drawing -->
+
+  <!-- <script>
+  var canvas = document.getElementById('canvas');
+  var context = canvas.getContext('2d');
+
+  context.canvas.width = window.innerWidth; -->
+  <!--
+  //  var radius = 10;
+  //  context.lineWidth = radius*2;
+  //  // variable to check whether the user is pressing the mouse down or not
+  //  var dragging = false;
+  //
+  //
+  //  var putPoint = function(e){
+  //    if (dragging){
+  //      context.lineTo(e.offsetX, e.offsetY);
+  //      context.stroke();
+  //      context.beginPath();
+  //      context.arc(e.offsetX, e.offsetY, radius, 0, 2*Math.PI);
+  //      context.fill();
+  //      context.beginPath();
+  //      context.moveTo(e.offsetX, e.offsetY);
+  //  }
+  //  }
+  //
+  //  var engage = function(e){
+  //    dragging = true;
+  //    putPoint(e);
+  //  }
+  //
+  //  var disengage = function(){
+  //    dragging = false;
+  //    // starts the path over so that there is not a line automatically when the user starts to draw again
+  //    context.beginPath();
+  //  }
+  //
+  //  canvas.addEventListener('mousedown', engage);
+  //  canvas.addEventListener('mouseup', disengage);
+  //  canvas.addEventListener('mousemove', putPoint); -->
+
+  <!-- </script> -->
+
+
+
+
+
+
+  <!-- <div id = "stack" style="background-color: transparent;
+  background: transparent;
+  border-color: transparent; height: 2000px;"> -->
+
+    <!-- <main> -->
+      <!-- <header class="codrops-header">
+        <h1>Isometric Grids</h1>
+        <p>Decorative &amp; interactive isometric &amp; 3D grids.<p>
+        <nav class="codrops-demos">
+          <a class="current-demo" href="index.html">Scrollable grid</a>
+          <a href="index2.html">Static grid</a>
+        </nav>
+        <div class="codrops-links">
+          <a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/DistortedButtonEffects/" title="Previous Demo"><span>Previous Demo</span></a>
+          <a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=27094" title="Back to the article"><span>Back to the Codrops article</span></a>
+        </div>
+        <button class="button-menu">
+          <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 67.75 43.63"><rect width="67.75" height="8.38"/><rect x="4.15" y="17.63" width="59.45" height="8.38" /><rect y="35.25" width="67.75" height="8.38"/></svg>
+        </button>
+      </header> -->
+  <!-- <div class = "spacer2"></div> -->
+
+      <div class="isolayer isolayer--deco2">
+        <ul class="grid">
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/cor4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/cor2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/cor1.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/cor3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/cor4.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/10.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/5.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/coffee2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee6.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee2.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/8.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/art6.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art1.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art6.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+
+
+              <img class="grid__img layer" src="photos/lake1.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake1.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/garden12.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden10.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden12.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/lake7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake7.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/lake6.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake11.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake10.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake6.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/city1.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city1.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/lake3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/lake3.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/garden2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden1.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden6.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden20.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/city2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city2.jpg" alt="01" />
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/garden2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden1.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden2.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden6.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden20.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/city10.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city12.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city13.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city10.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/city7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city6.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city11.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city6.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city7.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/city1.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/city1.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/garden8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden7.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden5.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden8.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/coffee4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee8.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/coffee4.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/garden3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden10.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden3.jpg" alt="01" />
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/art13.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art11.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art13.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/garden3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden10.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden3.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/art13.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art11.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art9.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/art13.jpg" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="#">
+              <img class="grid__img layer" src="photos/garden3.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden4.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden10.jpg" alt="01" />
+              <img class="grid__img layer" src="photos/garden3.jpg" alt="01" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+      <!-- Uncomment for static stacks  -->
+
+      <!-- <div class="isolayer isolayer--deco1 isolayer--shadow">
+        <ul class="grid">
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/1.png" alt="01" />
+            </a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/2.png" alt="02" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/3.png" alt="03" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/4.png" alt="04" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/5.png" alt="05" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/6.png" alt="06" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/7.png" alt="07" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/8.png" alt="08" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/9.png" alt="09" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/10.png" alt="10" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/1.png" alt="01" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/2.png" alt="02" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/3.png" alt="03" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/4.png" alt="04" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/5.png" alt="05" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/6.png" alt="06" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/7.png" alt="07" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/8.png" alt="08" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/9.png" alt="09" /></a>
+          </li>
+          <li class="grid__item">
+            <a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="IsometricGrids/img/Dribbble/10.png" alt="10" /></a>
+          </li>
+        </ul>
+      </div> -->
+
+
+
+
+
+      <!-- </main> -->
+      <!-- <a class="pater" href="https://goo.gl/k3vxNx">
+      <h2 class="pater__title" aria-label="PageCloud"><img src="img/PageCloud_logo.svg" alt="PageCloud Logo"/></h2>
+      <p class="pater__desc">Take control of your website with features you won't find anywhere else. Find out why PageCloud is the world's most advanced website creator today!</p>
+    </a> -->
+    <script src="IsometricGrids/js/imagesloaded.pkgd.min.js"></script>
+    <script src="IsometricGrids/js/masonry.pkgd.min.js"></script>
+    <script src="IsometricGrids/js/dynamics.min.js"></script>
+    <script src="IsometricGrids/js/classie.js"></script>
+    <script src="IsometricGrids/js/animOnScroll.js"></script>
+    <script src="IsometricGrids/js/main.js"></script>
+    <script>
+
+
+
+
+
+
+
+
+    // uncomment for static stacks
+
+    //   (function() {
+    // 		function getRandomInt(min, max) {
+    // 			return Math.floor(Math.random() * (max - min + 1)) + min;
+    // 		}
+    //     new IsoGrid(document.querySelector('.isolayer--deco1'), {
+    //     transform : 'translateX(33vw) translateY(-340px) rotateX(45deg) rotateZ(45deg)',
+    //     stackItemsAnimation : {
+    //       properties : function(pos) {
+    //         return {
+    //           translateZ: (pos+1) * 30,
+    //           rotateZ: getRandomInt(-4, 4)
+    //         };
+    //       },
+    //       options : function(pos, itemstotal) {
+    //         return {
+    //           type: dynamics.bezier,
+    //           duration: 500,
+    //           points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+    //           delay: (itemstotal-pos-1)*40
+    //         };
+    //       }
+    //     },
+    //     onGridLoaded : function() {
+    // 				classie.add(document.body, 'grid-loaded');
+    //       }
+    //   });
+    // })();
+
+
+    (function() {
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      new IsoGrid(document.querySelector('.isolayer--deco2'), {
+        perspective: 3000,
+        transform : 'translateY(-150px) rotateX(55deg) rotateZ(-45deg)',
+        stackItemsAnimation : {
+          properties : function(pos) {
+            return {
+              translateX: getRandomInt(-60, 60),
+              translateY: getRandomInt(-60, 60),
+              rotateZ: getRandomInt(-10, 10)
+            };
+          },
+          options : function(pos, itemstotal) {
+            return {
+              type: dynamics.bezier,
+              duration: 800,
+              points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+              delay: (itemstotal-pos-1)*20
+            };
+          }
+        },
+        onGridLoaded : function() {
+          classie.add(document.body, 'grid-loaded');
+        }
+      });
+    })();
+
+
+
+
+    // uncomment for scrollable stack
+
+    // (function() {
+    // function getRandomInt(min, max) {
+    //   return Math.floor(Math.random() * (max - min + 1)) + min;
+    // }
+    //
+    // [].slice.call(document.querySelectorAll('.isolayer')).forEach(function(el) {
+    //   new IsoGrid(el, {
+    //     type : 'scrollable',
+    //     transform : 'translateX(-15vw) translateY(275px) rotateX(45deg) rotateZ(45deg)',
+    //     stackItemsAnimation : {
+    //       properties : function(pos) {
+    //         return {
+    //           translateZ: (pos+1) * 50,
+    //           rotateZ: getRandomInt(-3, 3)
+    //         };
+    //       },
+    //       options : function(pos, itemstotal) {
+    //         return {
+    //           type: dynamics.bezier,
+    //           duration: 500,
+    //           points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+    //           //delay: (itemstotal-pos-1)*40
+    //         };
+    //       }
+    //     },
+    //     onGridLoaded : function() {
+    //       classie.add(document.body, 'grid-loaded');
+    //     }
+    //   });
+    // });
+    // })();
+    </script>
+
+  </div>
+  <div class="parallax3" id="photo" ></div>
+
+
+  <div class="parallax3" ></div>
+  <div class="parallax3" ></div>
+
+
+
+  <div id = "outer" style="background-color: #E8EDF0; height: 500px">
+
+
+    <canvas id='c' height = 500 width = 500 >
+    </canvas>
+
+    <!-- // painting canvas element borrowed from <script src="https://gist.github.com/dzhang123/0d676a5c9f0a3d06d908.js"></script> -->
+    <script src='painting/js/kzymdn.js'></script>
+    <script src='painting/js/index.js'></script>
+  </div>
+
+
+
+  <div class="parallax2" >
+
+    <div class="parallax2" ></div>
+
+
+
+<!-- attempt at creating a photo grid -->
+  <!-- <div id = "photo" style="background-color: #E8EDF0; height: 1000px">
+
+    <div class="container">
+      <div class="item"><img src="https://unsplash.it/190?image=856"/></div>
+      <div class="item tall"><img src="https://unsplash.it/190?image=857"/></div>
+      <div class="item"><img src="https://unsplash.it/190?image=858"/></div>
+      <div class="item"><img src="https://unsplash.it/190?image=859"/></div>
+      <div class="item tall"><img src="https://unsplash.it/190?image=860"/></div>
+      <div class="item"><img src="https://unsplash.it/190?image=861"/></div>
+      <div class="item"><img src="https://unsplash.it/190?image=862"/></div>
+      <div class="item tall"><img src="https://unsplash.it/190?image=863"/></div>
+    </div>
+
+  </div> -->
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+</html>
