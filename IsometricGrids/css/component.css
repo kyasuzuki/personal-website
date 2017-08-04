@@ -78,6 +78,7 @@ body {
 	display: block;
 }
 
+
 .layer:not(:first-child) {
 	position: absolute;
 	top: 0;
@@ -255,15 +256,29 @@ body {
 }
 
 .isolayer--deco4 .grid__link .layer:first-child:not(img) {
-	background: #ac5cf5;
+	background: transparent;
+	/*#ac5cf5;*/
 }
 
 .isolayer--deco4 .grid__link .layer:nth-child(2):not(img) {
-	background: #5db4eb;
+	/*background: #5db4eb;*/
+	background: transparent;
 }
 
 .isolayer--deco4 .grid__link .layer:nth-child(3):not(img) {
-	background: #5debb4;
+	/*background: #5debb4;*/
+	background: transparent;
+}
+
+.record{
+	width: 203px;
+	height: 203px;
+	opacity: 1;
+}
+
+.albumCoverArt{
+	width: 203px;
+	height: 203px;
 }
 
 .isolayer--deco4 .grid__link .layer {

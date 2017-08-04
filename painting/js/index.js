@@ -299,7 +299,7 @@ var Brush = (function() {
 
     function resize(e) {
         canvas.width  = window.innerWidth;
-        canvas.height =500;
+        canvas.height = 1000;
         centerX = canvas.width * 0.5;
         centerY = canvas.height * 0.5;
         context = canvas.getContext('2d');

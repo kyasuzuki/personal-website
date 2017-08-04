@@ -111,8 +111,9 @@ body, html {
 }
 
 /* Icon made by iconfinder.com */
-#outer {
+#c {
   cursor: url("icons/paintroller.png"), auto;
+
 }
 
 #me {
@@ -153,9 +154,45 @@ body, html {
   height: 75px;
 }
 
-/*.spacer2{
-  height: 100px;
-}*/
+#photo {
+  font-family: 'Shadows Into Light';
+  font-size:30px;
+  padding-left: 80px;
+  padding-top: 270px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  /*background-color:#E8EDF0;*/
+  color: #E8EDF0;
+  z-index: 2;
+}
+#recordsText {
+  font-family: 'Shadows Into Light';
+  font-size:30px;
+  padding-left: 80px;
+  padding-top: 370px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  /*background-color:#E8EDF0;*/
+  color: #E8EDF0;
+  z-index: 2;
+}
+
+#canvasText {
+  font-family: 'Shadows Into Light';
+  font-size:30px;
+  padding-left: 80px;
+  padding-top: 370px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  /*background-color:#E8EDF0;*/
+  color: #E8EDF0;
+  z-index: 2;
+}
+
+#albumCoverArt {
+  width: 50;
+  height: 50;
+}
 
 .transparent {
 background:rgba(255,255,255,0.5);
