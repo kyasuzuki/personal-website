@@ -279,6 +279,7 @@ body {
 .albumCoverArt{
 	width: 203px;
 	height: 203px;
+	opacity: 1;
 }
 
 .isolayer--deco4 .grid__link .layer {
