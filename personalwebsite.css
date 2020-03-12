@@ -1,10 +1,10 @@
-body, html {
+body,
+html {
   margin: 0;
-  padding:0;
+  padding: 0;
   background: #ffffff;
   color: #777;
   height: 100%;
-
 }
 
 .topnav {
@@ -18,19 +18,17 @@ body, html {
   z-index: 9;
 }
 
-
-
 .topnav a {
   float: left;
   display: block;
-  color: #E8EDF0;
+  color: #e8edf0;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 26px;
   letter-spacing: 1px;
   font-weight: bold;
-   font-family: 'Shadows Into Light';
+  font-family: "Shadows Into Light";
 }
 
 .topnav a:hover {
@@ -43,7 +41,7 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #E8EDF0;
+  background-color: #e8edf0;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
   z-index: 9;
 }
@@ -55,13 +53,11 @@ body, html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'Shadows Into Light';
+  font-family: "Shadows Into Light";
   font-size: 26px;
   letter-spacing: 1px;
   font-weight: bold;
-
 }
-
 
 .topnavChanged a:hover {
   background-color: gray;
@@ -76,19 +72,19 @@ body, html {
   margin-top:  .1%;
 }*/
 
-
-.parallax1, .parallax2, .parallax3 {
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.parallax1,
+.parallax2,
+.parallax3 {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .parallax1 {
   /* The image used */
-  background-image: url('images/letgo.jpg');
+  background-image: url("images/letgo.jpg");
 
   /* Full height */
   height: 100%;
@@ -96,7 +92,7 @@ body, html {
 
 .parallax2 {
   /* The image used */
-  background-image: url('images/cape.jpg');
+  background-image: url("images/cape.jpg");
 
   /* Full height */
   height: 100%;
@@ -104,7 +100,7 @@ body, html {
 
 .parallax3 {
   /* The image used */
-  background-image: url('images/cape4.jpg');
+  background-image: url("images/cape4.jpg");
 
   /* Full height */
   height: 100%;
@@ -113,7 +109,6 @@ body, html {
 /* Icon made by iconfinder.com */
 #c {
   cursor: url("icons/paintroller.png"), auto;
-
 }
 
 #me {
@@ -121,13 +116,13 @@ body, html {
 }
 
 #typedtext {
-  font-family: 'Shadows Into Light';
-  font-size:30px;
+  font-family: "Shadows Into Light";
+  font-size: 30px;
   margin: 0px 50px;
   letter-spacing: 6px;
   font-weight: bold;
   /*background-color:#E8EDF0;*/
-  color: #E8EDF0;
+  color: #e8edf0;
 }
 
 /*#profile {
@@ -150,25 +145,25 @@ body, html {
   margin: 5px;
 }
 
-.spacer{
+.spacer {
   height: 75px;
 }
 
 #photo {
-  font-family: 'Shadows Into Light';
-  font-size:30px;
+  font-family: "Shadows Into Light";
+  font-size: 30px;
   padding-left: 80px;
   padding-top: 270px;
   letter-spacing: 6px;
   font-weight: bold;
   /*background-color:#E8EDF0;*/
-  color: #E8EDF0;
+  color: #e8edf0;
   z-index: 2;
 }
 
 #credits {
-  font-family: 'Shadows Into Light';
-  font-size:12px;
+  font-family: "Shadows Into Light";
+  font-size: 12px;
   font-weight: bold;
   padding-left: 80px;
   padding-top: 650px;
@@ -176,35 +171,34 @@ body, html {
   font-style: bold;
   text-align: center;
   /*background-color:#E8EDF0;*/
-  color: #E8EDF0;
+  color: #e8edf0;
   z-index: 2;
 }
 
 #recordsText {
-  font-family: 'Shadows Into Light';
-  font-size:30px;
+  font-family: "Shadows Into Light";
+  font-size: 30px;
   padding-left: 80px;
   padding-top: 370px;
   letter-spacing: 6px;
   font-weight: bold;
   /*background-color:#E8EDF0;*/
-  color: #E8EDF0;
+  color: #e8edf0;
   z-index: 2;
 }
 
 #canvasText {
-  font-family: 'Shadows Into Light';
-  font-size:30px;
+  font-family: "Shadows Into Light";
+  font-size: 30px;
   padding-left: 80px;
   padding-top: 370px;
   letter-spacing: 6px;
   font-weight: bold;
   /*background-color:#E8EDF0;*/
-  color: #E8EDF0;
+  color: #e8edf0;
   z-index: 2;
 }
 
-
 .transparent {
-background:rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
